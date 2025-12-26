@@ -70,6 +70,15 @@ class VeteransGravesiteScraper:
                 self.driver.find_element(By.ID, "fname").click()
                 time.sleep(1)
 
+            # =========== 添加确认步骤 ===========
+            print("\n" + "="*50)
+            print("已定位到搜索按钮，等待您的确认...")
+            print(f"当前搜索条件: 姓氏 {last_name} (begins with)")
+            print("请检查浏览器中的搜索条件是否正确")
+            input("确认无误后，按 Enter 键开始搜索 (或按 Ctrl+C 取消)... ")
+            print("="*50 + "\n")
+            # =========== 确认步骤结束 ===========
+
             # 点击搜索
             search_button.click()
             print("点击搜索按钮")
